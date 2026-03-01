@@ -53,7 +53,6 @@ export default function Home() {
             fill
             style={{ objectFit: 'cover', objectPosition: 'center right' }}
             priority
-            quality={75}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(245,240,232,0.1) 0%, rgba(245,240,232,0.95) 100%)' }} />
         </div>
@@ -170,7 +169,6 @@ export default function Home() {
               alt="The Brunch Box - sourdough bagels with smoked salmon and all the fixings"
               fill
               style={{ objectFit: 'cover' }}
-              quality={90}
             />
           </div>
         </div>
@@ -197,7 +195,6 @@ export default function Home() {
                   alt={p.alt}
                   fill
                   style={{ objectFit: 'cover', transition: 'transform 0.4s ease' }}
-                  quality={85}
                 />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem', background: 'linear-gradient(to top, rgba(107,68,35,0.85), transparent)' }}>
                   <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.15em', color: '#F5F0E8', textTransform: 'uppercase' }}>
