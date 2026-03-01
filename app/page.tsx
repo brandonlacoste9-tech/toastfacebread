@@ -59,8 +59,8 @@ export default function Home() {
         </div>
 
         <div style={{ position: 'relative', zIndex: 10, maxWidth: '600px', margin: '0 auto', padding: '4rem 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.3em', color: '#D4A574', textTransform: 'uppercase', marginBottom: '2rem', letterSpacing: '0.2em' }}>
-            ★ SMALL BATCH SOURDOUGH
+          <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.2em', color: '#D4A574', textTransform: 'uppercase', marginBottom: '2rem' }}>
+            {'★'} SMALL BATCH SOURDOUGH
           </p>
           
           <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(3rem, 10vw, 6rem)', lineHeight: 1.1, color: '#6B4423', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
