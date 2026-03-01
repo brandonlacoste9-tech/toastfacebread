@@ -22,10 +22,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-foreground/10;
-  }
-
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
