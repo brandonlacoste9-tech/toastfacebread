@@ -5,6 +5,16 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'from-cream/90',
+    'via-cream/80',
+    'bg-accent/10',
+    'bg-primary/5',
+    'border-primary/20',
+    'text-cream/80',
+    'text-cream/60',
+    'text-cream/40',
+  ],
   theme: {
     extend: {
       colors: {
@@ -19,8 +29,9 @@ const config: Config = {
         'golden-wheat': '#D4A574',
       },
       fontFamily: {
-        display: 'var(--font-display)',
-        body: 'var(--font-body)',
+        display: ['var(--font-display)', 'monospace'],
+        body: ['var(--font-body)', 'serif'],
+        sans: ['var(--font-body)', 'serif'],
       },
       spacing: {
         safe: 'max(1rem, env(safe-area-inset-bottom))',
