@@ -23,7 +23,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-foreground/10;
   }
 
   body {
