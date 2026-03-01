@@ -34,19 +34,19 @@ export function WeeklyMenuSection() {
   ]
 
   return (
-    <section id="menu" className="w-full py-20 md:py-32 px-6 md:px-12 bg-background">
+    <section id="menu" className="w-full py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-12 bg-background">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-title mb-4">This Week's Menu</h2>
-        <p className="text-muted text-lg mb-12 font-body">Fresh out of the oven every week</p>
+        <h2 className="section-title mb-3 sm:mb-4">This Week's Menu</h2>
+        <p className="text-muted text-base sm:text-lg mb-8 sm:mb-12 font-body">Fresh out of the oven every week</p>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
           {menu.map((category, idx) => (
             <div key={idx} className="space-y-4">
-              <h3 className="font-display font-bold text-2xl text-primary">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-primary">
                 {category.name}
               </h3>
               {category.price && (
-                <p className="text-lg font-display font-bold text-accent">
+                <p className="text-base sm:text-lg font-display font-bold text-accent">
                   {category.price}
                 </p>
               )}
@@ -54,7 +54,7 @@ export function WeeklyMenuSection() {
                 {category.items.map((item, itemIdx) => (
                   <li
                     key={itemIdx}
-                    className="text-muted text-lg font-body leading-relaxed"
+                    className="text-muted text-base sm:text-lg font-body leading-relaxed"
                   >
                     -{item}
                   </li>
@@ -64,11 +64,11 @@ export function WeeklyMenuSection() {
           ))}
         </div>
 
-        <div className="mt-16 p-8 bg-accent/10 border-2 border-accent">
-          <p className="font-display font-bold text-primary text-lg uppercase tracking-wider">
+        <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-accent/10 border-2 border-accent">
+          <p className="font-display font-bold text-primary text-base sm:text-lg uppercase tracking-wider">
             Order through Instagram @toastfacebreadco
           </p>
-          <p className="text-muted mt-3 font-body">
+          <p className="text-muted mt-2 sm:mt-3 font-body text-sm sm:text-base">
             Payment via e-transfer. Pickup available downtown Edmonton.
           </p>
         </div>

@@ -22,15 +22,15 @@ export function ProductGallery() {
   ]
 
   return (
-    <section className="w-full py-20 md:py-32 px-6 md:px-12 bg-cream">
+    <section className="w-full py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-12 bg-cream">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-title mb-12">Our Products</h2>
+        <h2 className="section-title mb-8 sm:mb-12">Our Products</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {products.map((product, idx) => (
             <div key={idx} className="group cursor-pointer">
               {/* Image Container with Edge Lighting Effect */}
-              <div className="relative h-80 md:h-96 mb-6 overflow-hidden bg-muted/20">
+              <div className="relative h-64 sm:h-80 md:h-96 mb-4 sm:mb-6 overflow-hidden bg-muted/20 rounded-lg">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -43,10 +43,10 @@ export function ProductGallery() {
               </div>
 
               {/* Product Info */}
-              <h3 className="font-display font-bold text-2xl text-primary mb-2">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-primary mb-2">
                 {product.name}
               </h3>
-              <p className="text-muted font-body text-lg leading-relaxed">
+              <p className="text-muted font-body text-base sm:text-lg leading-relaxed">
                 {product.description}
               </p>
             </div>
