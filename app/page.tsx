@@ -44,44 +44,59 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <header style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', overflow: 'hidden', paddingTop: '4rem' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      <header style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', paddingTop: '4rem', backgroundColor: '#F5F0E8' }}>
+        {/* Subtle background element */}
+        <div style={{ position: 'absolute', top: 0, right: 0, width: '60%', height: '100%', zIndex: 0, opacity: 0.4 }}>
           <Image
             src="/hero-bread.jpg"
-            alt="Artisan sourdough loaf with dramatic edge lighting"
+            alt="Artisan sourdough background"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: 'cover', objectPosition: 'center right' }}
             priority
-            quality={90}
+            quality={75}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(245,240,232,0.95) 0%, rgba(245,240,232,0.85) 40%, rgba(245,240,232,0.3) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(245,240,232,0.1) 0%, rgba(245,240,232,0.95) 100%)' }} />
         </div>
 
-        <div style={{ position: 'relative', zIndex: 10, maxWidth: '960px', margin: '0 auto', padding: '4rem 1.5rem' }}>
-          <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.25em', color: '#D4A574', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-            Small Batch Sourdough — Est. 2022
+        <div style={{ position: 'relative', zIndex: 10, maxWidth: '600px', margin: '0 auto', padding: '4rem 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.3em', color: '#D4A574', textTransform: 'uppercase', marginBottom: '2rem', letterSpacing: '0.2em' }}>
+            ★ SMALL BATCH SOURDOUGH
           </p>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', lineHeight: 1.05, color: '#6B4423', marginBottom: '1.5rem', maxWidth: '14ch' }}>
+          
+          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(3rem, 10vw, 6rem)', lineHeight: 1.1, color: '#6B4423', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
             Toast Face Bread Co
           </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1rem, 2.5vw, 1.35rem)', color: '#9E8B7E', maxWidth: '42ch', lineHeight: 1.6, marginBottom: '2.5rem' }}>
-            Fresh out of the oven every week. Downtown Edmonton. Order through Instagram, pay via e-transfer.
+
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1.05rem, 2vw, 1.4rem)', color: '#9E8B7E', maxWidth: '45ch', lineHeight: 1.7, marginBottom: '3rem', fontWeight: 400 }}>
+            Fresh sourdough delivered every week, right out of the oven. Downtown Edmonton. Order on Instagram.
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '280px' }}>
             <Link
               href="#menu"
-              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', padding: '0.875rem 1.75rem', backgroundColor: '#6B4423', color: '#F5F0E8', display: 'inline-block' }}
+              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', padding: '1rem 1.75rem', backgroundColor: '#6B4423', color: '#F5F0E8', display: 'block', textAlign: 'center', transition: 'all 0.3s ease', cursor: 'pointer' }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#8B5A3C')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#6B4423')}
             >
-              This Week's Menu
+              View This Week's Menu
             </Link>
             <a
               href="https://www.instagram.com/toastfacebreadco"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', padding: '0.875rem 1.75rem', border: '2px solid #6B4423', color: '#6B4423', display: 'inline-block' }}
+              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', padding: '1rem 1.75rem', border: '2.5px solid #6B4423', color: '#6B4423', display: 'block', textAlign: 'center', transition: 'all 0.3s ease', backgroundColor: 'transparent', cursor: 'pointer' }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#6B4423'; e.currentTarget.style.color = '#F5F0E8'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#6B4423'; }}
             >
-              @toastfacebreadco
+              Order @toastfacebreadco
             </a>
+          </div>
+
+          <div style={{ marginTop: '4rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ width: '40px', height: '1px', backgroundColor: '#D4A574' }} />
+            <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.15em', color: '#D4A574', textTransform: 'uppercase', margin: 0 }}>
+              Est. 2022
+            </p>
           </div>
         </div>
       </header>
