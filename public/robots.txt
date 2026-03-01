@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toastfacebreadco.com/sitemap.xml
+
+# Disallow crawler-heavy paths
+Disallow: /api/
+Disallow: /_next/
+
+# Allow fast crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

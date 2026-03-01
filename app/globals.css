@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Brand Colors */
+  --toasted-brown: #6B4423;
+  --golden-wheat: #D4A574;
+  --cream-white: #F5F0E8;
+  --black: #1a1a1a;
+  
+  /* Semantic Tokens */
+  --background: #F5F0E8;
+  --foreground: #1a1a1a;
+  --primary: #6B4423;
+  --accent: #D4A574;
+  --muted: #9E8B7E;
+  
+  /* Fonts */
+  --font-display: 'Space Mono', monospace;
+  --font-body: 'Crimson Text', serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .hero-text {
+    @apply font-display font-bold text-6xl md:text-8xl leading-tight text-balance;
+  }
+
+  .section-title {
+    @apply font-display font-bold text-4xl md:text-5xl text-primary;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-primary text-cream-white font-display font-bold uppercase tracking-wider hover:bg-toasted-brown transition-colors;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-primary text-primary font-display font-bold uppercase tracking-wider hover:bg-primary hover:text-cream-white transition-colors;
+  }
+
+  .instagram-link {
+    @apply text-primary hover:text-accent font-display font-bold uppercase tracking-wider transition-colors;
+  }
+}
+
+/* Ensure proper color application via CSS variables */
+:root {
+  --background: 245 240 232;
+  --foreground: 26 26 26;
+}
+
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
