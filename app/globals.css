@@ -65,11 +65,11 @@
   }
 
   .button-primary {
-    @apply px-4 sm:px-6 py-3 bg-primary text-cream-white font-display font-bold uppercase tracking-wider hover:bg-toasted-brown transition-colors rounded active:scale-95 min-h-12 sm:min-h-auto;
+    @apply px-4 sm:px-6 py-3 bg-primary text-cream font-display font-bold uppercase tracking-wider hover:bg-toasted-brown transition-colors rounded active:scale-95 min-h-12 sm:min-h-auto;
   }
 
   .button-secondary {
-    @apply px-4 sm:px-6 py-3 bg-transparent border-2 border-primary text-primary font-display font-bold uppercase tracking-wider hover:bg-primary hover:text-cream-white transition-colors rounded active:scale-95 min-h-12 sm:min-h-auto;
+    @apply px-4 sm:px-6 py-3 bg-transparent border-2 border-primary text-primary font-display font-bold uppercase tracking-wider hover:bg-primary hover:text-cream transition-colors rounded active:scale-95 min-h-12 sm:min-h-auto;
   }
 
   .instagram-link {
