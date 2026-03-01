@@ -8,8 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
         primary: '#6B4423',
         accent: '#D4A574',
         cream: '#F5F0E8',
