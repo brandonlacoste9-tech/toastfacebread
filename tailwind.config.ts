@@ -13,6 +13,7 @@ const config: Config = {
         primary: '#6B4423',
         accent: '#D4A574',
         cream: '#F5F0E8',
+        'cream-white': '#F5F0E8',
         muted: '#9E8B7E',
         'toasted-brown': '#6B4423',
         'golden-wheat': '#D4A574',
