@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Mono', monospace;
+  --font-body: 'Crimson Text', serif;
+}
