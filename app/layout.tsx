@@ -63,13 +63,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <StructuredData />
-      </head>
       <body
         className={`${spaceMono.variable} ${crimsonText.variable}`}
         style={{ backgroundColor: '#F5F0E8', color: '#1a1a1a', margin: 0, padding: 0 }}
       >
+        <StructuredData />
         {children}
       </body>
     </html>
