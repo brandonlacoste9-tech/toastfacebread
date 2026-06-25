@@ -6,8 +6,13 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     if (body.message?.type === "end-of-call-report") {
-      const summary = body.message.call?.summary || "No order summary generated.";
-      const transcript = body.message.call?.transcript || "";
+      let summary = body.message.call?.summary;
+      const transcript = body.message.call?.transcript || "No transcript available.";
+      
+      if (!summary || summary.trim() === "") {
+        summary = `(Summary processing delayed. Here is the raw transcript):\n${transcript}`;
+      }
+      
       const angiePhone = process.env.ANGIE_PHONE_NUMBER;
       
       const textBody = `🍞 New Bakery Order via AI Concierge:\n\n${summary}`;
