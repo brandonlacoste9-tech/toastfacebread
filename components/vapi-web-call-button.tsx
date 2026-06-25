@@ -69,6 +69,7 @@ ${services ? `Services available:\n${JSON.stringify(services, null, 2)}` : ""}
           provider: "openai",
           voiceId: "alloy",
         },
+        serverUrl: typeof window !== 'undefined' ? `${window.location.origin}/api/vapi/webhook` : undefined,
         ...restOverrides
       };
 
