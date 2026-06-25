@@ -70,6 +70,9 @@ ${services ? `Services available:\n${JSON.stringify(services, null, 2)}` : ""}
           voiceId: "alloy",
         },
         serverUrl: typeof window !== 'undefined' ? `${window.location.origin}/api/vapi/webhook` : undefined,
+        analysisPlan: {
+          summaryPrompt: "Write a brief summary of the customer's bread order. You MUST write this summary STRICTLY in English, regardless of the language spoken during the call.",
+        },
         ...restOverrides
       };
 
