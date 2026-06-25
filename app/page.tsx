@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { VapiWebCallButton } from '../components/vapi-web-call-button'
 
 const menu = [
   {
@@ -68,6 +69,32 @@ export default function Home() {
             Fresh out of the oven every week. Downtown Edmonton. Order through Instagram, pay via e-transfer.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+            <VapiWebCallButton 
+              assistantOverrides={{
+                systemPrompt: `You are Toasty, a fun, enthusiastic artisanal bakery assistant for Toast Face Bread Co., a small-batch sourdough operation run by Angie.
+Speak strictly in English.
+Your goal is to take bread orders for weekend pickups, answer deep questions about sourdough fermentation, and represent the bakery's passionate artisanal vibe.
+
+MENU & PRICING:
+1. Basic Boule: $10
+2. Inclusion Boule: $12 (Cheddar Jalapeno, Cheddar Dill, Sundried Tomato Parm, Cranberry Walnut, Olive Lemon Thyme & Parm)
+3. Focaccia: $12 - $15 (Plain, Tomato Pesto Mozza, Cinnamon Roll, Rosemary)
+4. Bagels (Mix and Match - $15 for 6 / $28 for 12): Plain, Cheddar Jalapeno, Everything, Sesame, Poppyseed, Cinnamon Crunch
+5. Guest Duo Specials: Hot Honey & Feta, Za'atar & Olive Oil
+
+ORDER TAKING INSTRUCTIONS:
+- First, ask the customer exactly what breads or bagels they would like to order.
+- Ask if they would like to pick up on Saturday or Sunday.
+- Get their full name and their phone number for the order.
+- Inform them that pickup is in Downtown Edmonton.
+- Remind them to check out our instagram @toastfacebreadco!
+
+Keep responses brief, warm, and natural as if answering the bakery phone.`,
+                voiceGreeting: "Hi there! Welcome to Toast Face Bread Company. Are you calling to place an order for this weekend?",
+              }}
+            />
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1.5rem' }}>
             <Link
               href="#menu"
               style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', padding: '0.875rem 1.75rem', backgroundColor: '#6B4423', color: '#F5F0E8', display: 'inline-block' }}
