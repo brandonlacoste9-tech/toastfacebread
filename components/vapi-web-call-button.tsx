@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Vapi from "@vapi-ai/web";
 import { PhoneCall, Mic, Loader2 } from "lucide-react";
 
-const VAPI_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY || "dummy_key";
+const VAPI_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY || "dd33bebc-4d35-43e2-8d2f-31cc3a750fca";
 
 export function VapiWebCallButton({ 
   assistantOverrides,

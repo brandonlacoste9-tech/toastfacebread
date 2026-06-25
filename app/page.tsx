@@ -48,7 +48,7 @@ export default function Home() {
       <header style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', overflow: 'hidden', paddingTop: '4rem' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <Image
-            src="/hero-bread.jpg"
+            src="/bakery.png"
             alt="Artisan sourdough loaf with dramatic edge lighting"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
